@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<ul class="recipes">
+
+
+  <% if(data.length) { 
+    for(var i = 0; i< data.length; i++) {%> 
+
+      <li class="recipe">
+        <img src="/p10.jpeg" alt="smoothie recipe icon">
+        <h4> <%= data[i].name %></h4>
+        <p>Branch: <%= data[i].branch %></p>
+        <p>Batch: <%= data[i].gyear %></p>
+        <p>Company: <%= data[i].currentcompany %></p>
+        <p>Domain: <%= data[i].specializations %></p>
+        <p>Contact Info: <%= data[i].contactinfo %></p>
+        <p>Gmail: <a href="mailto:<%= data[i].gmail %>" style="color:blue"><%= data[i].gmail %></a></p>
+      </li>
+
+  <% }
+           
+   }else{ %>
+       <tr>
+          <td colspan="3">No user</td>
+       </tr>
+    <% } %>    
+
+</ul>
+
+<%- include('partials/footer'); -%>

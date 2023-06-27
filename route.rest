@@ -1,0 +1,4 @@
+POST http://localhost:3000/add-alumini
+
+###
+GET http://localhost:3000/alumini-details
